@@ -2,10 +2,9 @@ package lt.bt.Uzdaviniai;
 
 import java.util.Scanner;
 
-public class Plotas {
+public class plotai {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        // write your code here
         System.out.println("hello world");
             int n;
         System.out.println("Pasirinkite ka norite skaiciuoti:");
@@ -13,7 +12,7 @@ public class Plotas {
         System.out.println("Jai staciakampi iveskite: 2;");
         System.out.println("Jai skritulys iveskite: 3;");
         System.out.println("Jei patikrinti lyginius nelyginius skaicius iveskite: 4;");
-        System.out.println("Jei patikrinti kvadratine lygti: 5");
+        System.out.println("Jei patikrinti kvadratine lygti: 5;");
         n = reader.nextInt();
         System.out.println(n);
             int a,b,c,akv,bkv,Skv,r;
