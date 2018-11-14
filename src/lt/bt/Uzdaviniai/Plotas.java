@@ -12,8 +12,8 @@ public class Plotas {
         System.out.println("Jai trikampi iveskite: 1;");
         System.out.println("Jai staciakampi iveskite: 2;");
         System.out.println("Jai skritulys iveskite: 3;");
-        System.out.println("Jei nori pakelti kvadratu iveskite: 4;");
-        System.out.println("Jei patikrinti lyginius nelyginius skaicius iveskite: 5");
+        System.out.println("Jei patikrinti lyginius nelyginius skaicius iveskite: 4;");
+        System.out.println("Jei patikrinti kvadratine lygti: 5");
         n = reader.nextInt();
         System.out.println(n);
             int a,b,c,akv,bkv,Skv,r;
@@ -45,13 +45,6 @@ public class Plotas {
                 System.out.println("Skritulio plotas: " + Sap);
             }
             else if (n==4){
-                int a2;
-                System.out.println("Iveskite skaiciu :");
-                a2 = reader.nextInt();
-                a2 = a2 * a2;
-                System.out.println("Skaicius: " + a2);
-            }
-            else if (n==5){
                 int alyg;
                 System.out.println("Iveskite skaiciu :");
                 alyg = reader.nextInt();
@@ -59,6 +52,29 @@ public class Plotas {
                     System.out.println("Lyginis skaicius");
                 }
                 else { System.out.println("Nelyginis skaicius");}
+            }
+            else if (n==5){
+                System.out.print("Kintamasis a: ");
+                double a2 = reader.nextInt();
+                System.out.print("Kintamasis b: ");
+                double b2 = reader.nextInt();
+                System.out.print("Kintamasis c: ");
+                double c2 = reader.nextInt();
+
+
+                double result = b2 * b2 - 4.0 * a2 * c2;
+
+                if (result > 0.0) {
+                    double r1 = (-b2 + Math.pow(result, 0.5)) / (2.0 * a2);
+                    double r2 = (-b2 - Math.pow(result, 0.5)) / (2.0 * a2);
+                    System.out.println(r1 + r2);
+                } else if (result == 0.0) {
+                    double r1 = -b2 / (2.0 * a2);
+                    System.out.println(r1);
+                } else {
+                    System.out.println("Nera saknu.");
+                }
+
             }
             else  {
                 System.out.println("bloga ivestis");
