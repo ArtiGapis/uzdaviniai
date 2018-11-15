@@ -13,6 +13,8 @@ public class Uzduotis2 {
         if (a>=18){
             System.out.println("Pilnametis " + a);
         }
-        else {System.out.println("Nepilnametis " + a);}
+        else {
+            System.out.println("Nepilnametis " + a);
+        }
     }
 }
