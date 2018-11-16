@@ -11,7 +11,7 @@ public class Uzduotis2 {
         a = reader.nextInt();
         a = 2018 - a;
         if (a>=18){
-            System.out.println("Pilnametis " + a);
+            System.out.println("pilnametis " + a);
         }
         else {
             System.out.println("Nepilnametis " + a);
