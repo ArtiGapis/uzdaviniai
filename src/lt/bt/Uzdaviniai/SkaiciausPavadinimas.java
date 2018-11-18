@@ -49,6 +49,8 @@ public class SkaiciausPavadinimas {
             }
             System.out.println(skaiciai);
         }
-        else {System.out.println("netinkama ivestis");}
+        else {
+            System.out.println("netinkama ivestis");
+        }
     }
 }
