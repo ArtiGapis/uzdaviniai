@@ -1,9 +1,10 @@
 package lt.bt.Uzdaviniai;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class SkaiciausPavadinimas {
-    public static void main(String[] args) {
+    public static void main(String[] args)throws IOException {
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Iveskite skaiciu nuo 1 iki 10:");
