@@ -3,10 +3,6 @@ package lt.bt.Uzdaviniai;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-
-
-
-import java.io.InputStreamReader;
 import java.io.IOException;
 
 public class skaiciuotuvas {
@@ -34,16 +30,16 @@ public class skaiciuotuvas {
             String veiksmai;
             switch (c) {
                 case 1:
-                    veiksmai = "atsakymas" + (a + b);
+                    veiksmai = "atsakymas: " + (a + b);
                     break;
                 case 2:
-                    veiksmai = "atsakymas" + (a - b);
+                    veiksmai = "atsakymas: " + (a - b);
                     break;
                 case 3:
-                    veiksmai = "atsakymas" + (a * b);
+                    veiksmai = "atsakymas: " + (a * b);
                     break;
                 case 4:
-                    veiksmai = "atsakymas" + (a / b);
+                    veiksmai = "atsakymas: " + (a / b);
                     break;
 
                 default:
