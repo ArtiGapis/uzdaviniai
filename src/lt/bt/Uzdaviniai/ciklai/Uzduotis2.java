@@ -9,6 +9,10 @@ public class Uzduotis2 {
         int a;
         System.out.println("Iveskite gimimo metus: ");
         a = reader.nextInt();
+        amzius(a);
+    }
+
+    private static void amzius(int a){
         a = 2018 - a;
         if (a>=18){
             System.out.println("pilnametis " + a);
