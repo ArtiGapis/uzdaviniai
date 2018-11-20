@@ -24,6 +24,7 @@ public class masyvu_vidurkis {
         }
 
         vid = suma / masyvas.length();
+        System.out.println("masyvas " +masyvas);
         System.out.println("masyvo vidurkis " +vid);
         int j = 0;
         int removeElement = vid;
