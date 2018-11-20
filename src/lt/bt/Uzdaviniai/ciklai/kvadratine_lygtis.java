@@ -11,6 +11,7 @@ public class kvadratine_lygtis {
         double b2 = reader.nextInt();
         System.out.print("Kintamasis c: ");
         double c2 = reader.nextInt();
+
         double result = b2 * b2 - 4.0 * a2 * c2;
         if (result > 0.0) {
             double r1 = (-b2 + Math.pow(result, 0.5)) / (2.0 * a2);

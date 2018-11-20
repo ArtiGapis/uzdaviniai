@@ -5,57 +5,94 @@ import java.util.Scanner;
 public class plotai {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("hello world");
-        int n;
-        System.out.println("Pasirinkite ka norite skaiciuoti:");
-        System.out.println("Jai trikampi iveskite: 1;");
-        System.out.println("Jai staciakampi iveskite: 2;");
-        System.out.println("Jai skritulys iveskite: 3;");
-        System.out.println("Jei patikrinti lyginius nelyginius skaicius iveskite: 4;");
-        System.out.println("Jei patikrinti kvadratine lygti: 5;");
+
+        int n,a,b,c,akv,bkv,r;
+
+        print("Pasirinkite ka norite skaiciuoti:");
+        print("Jai trikampi iveskite: 1;");
+        print("Jai staciakampi iveskite: 2;");
+        print("Jai skritulys iveskite: 3;");
+        print("Jei patikrinti lyginius nelyginius skaicius iveskite: 4;");
+        print("Jei patikrinti kvadratine lygti: 5;");
+
         n = reader.nextInt();
-        System.out.println(n);
-        int a,b,c,akv,bkv,Skv,r;
-        double P,S;
+
+
         if (n==1) {
-            System.out.println("Iveskite krastine a:");
+            print("Iveskite krastine a:");
             a = reader.nextInt();
-            System.out.println("Iveskite krastine b:");
+            print("Iveskite krastine b:");
             b = reader.nextInt();
-            System.out.println("Iveskite krastine c:");
+            print("Iveskite krastine c:");
             c = reader.nextInt();
-            P = a + b + c;
-            P = P / 2;
-            S = Math.sqrt(P * (P - a) * (P - b) * (P - c));
-            System.out.println("trikapio plotas " + S);
+
+            double ats = TrikapioPlotas(a, b, c);
+            print("Trikampio plotas:  " + ats);
         }
+
         else if (n==2) {
-            System.out.println("iveskite pirma krastine:");
+            print("iveskite pirma krastine:");
             akv = reader.nextInt();
-            System.out.println("Iveskite antrakrastine:");
+            print("Iveskite antrakrastine:");
             bkv = reader.nextInt();
-            Skv = akv * bkv;
-            System.out.println("Staciakampio plotas: " + Skv);
+
+            int ats = StaciakampioPlotas(akv, bkv);
+            print("Staciakampio plotas:  " + ats);
         }
+
         else if (n==3){
-            System.out.println("Iveskite spinduli :");
+            print("Iveskite spinduli :");
             r = reader.nextInt();
-            double Sap = Math.PI * (r * r);
-            System.out.println("Skritulio plotas: " + Sap);
+
+            double ats = SkritulioPlotas(r);
+            print("Skritulio plotas:  "+ats);
         }
+
         else if (n==4){
             int alyg;
-            System.out.println("Iveskite skaiciu :");
+            print("Iveskite skaiciu :");
             alyg = reader.nextInt();
-            if((alyg%2)==0){
-                System.out.println("Lyginis skaicius");
-            }
-            else { System.out.println("Nelyginis skaicius");}
+
+            NeLyg(alyg);
         }
+
         else  {
-            System.out.println("bloga ivestis");
+            print("bloga ivestis");
             reader.close();
 
+        }
+    }
+
+
+
+
+
+    private static void print(String n) {
+        System.out.println(n);
+    }
+
+    private static double TrikapioPlotas(int a, int b, int c){
+        double P = (a + b + c)/2;
+        double S = Math.sqrt(P * (P - a) * (P - b) * (P - c));
+        return S;
+    }
+
+    private static int StaciakampioPlotas(int akv, int bkv){
+        int Skv = akv * bkv;
+        return Skv;
+    }
+
+    private static double SkritulioPlotas(int r){
+        double Sap = Math.PI * (r * r);
+        return Sap;
+    }
+
+    private static void NeLyg(int alyg) {
+        if ((alyg % 2) == 0) {
+            System.out.println("Lyginis skaicius");
+        }
+        else {
+            System.out.println("Nelyginis skaicius");
         }
     }
 }
