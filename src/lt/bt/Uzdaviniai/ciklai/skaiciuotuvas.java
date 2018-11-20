@@ -1,4 +1,4 @@
-package lt.bt.Uzdaviniai;
+package lt.bt.Uzdaviniai.ciklai;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
