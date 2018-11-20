@@ -4,21 +4,20 @@ import java.util.Scanner;
 
 public class lyginiai_nelyginiai {
     public static void main(String[] args) {
-
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Iveskite skaiciu :");
+        int alyg = reader.nextInt();
 
         ivestis();
-        NElyginis();
+        NElyginis(alyg);
     }
 
 
     private static void ivestis(){
-        System.out.println("Iveskite skaiciu :");
+        System.out.println();
     }
 
-    private static void NElyginis(){
-        Scanner reader = new Scanner(System.in);
-        int alyg = reader.nextInt();
-
+    private static void NElyginis(int alyg){
         if((alyg%2)==0){
             System.out.println("Lyginis skaicius");
         }

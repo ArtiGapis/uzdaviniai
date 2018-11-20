@@ -10,6 +10,16 @@ public class SkaiciausPavadinimas {
         System.out.println("Iveskite skaiciu nuo 1 iki 10:");
         int n = reader.nextInt();
 
+        rastu(n);
+    }
+
+
+
+
+
+
+    private static void rastu(int n){
+
         String skaiciai;
         switch (n) {
             case 1:
