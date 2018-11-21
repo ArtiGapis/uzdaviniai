@@ -8,12 +8,11 @@ import java.io.IOException;
 public class naujas_masyvu_vidurkis {
     public static void main(String[] args) throws IOException {
 
-        String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\masyvu vidurkis.txt";
+        String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\masyvu_vidurkis.txt";
         File file = new File(filePath);
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
-
-        int[] array = new int[5];
+        int[] array = new int[4];
         int i = 0;
         int j = 0;
 
@@ -28,13 +27,13 @@ public class naujas_masyvu_vidurkis {
         }
 
         double average = (double) sum / array.length;
-        int[] newArray = new int[array.length - 2];
-
+        int[] newArray = new int[array.length - 4];
         for (i = 0; i < array.length; i++) {
             if (array[i] > average) {
                 newArray[j] = array[i];
                 j++;
             }
+
         }
 
     }
