@@ -1,32 +1,53 @@
 package lt.bt.Uzdaviniai.funkcijos;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Uzduotis5 {
     public static void main(String[] args) throws IOException {
         Scanner reader = new Scanner(System.in);
-        int[] array = {3, 4, 5, 7, 4, 22, 11, 3, 5, 6, 6};
+        boolean stop = false;
+        while (!stop) {
 
-        print("iveskite skaiciu");
+            int[] array = {3, 4, 5, 7, 4, 22, 11, 3, 5, 6, 6};
+            int x=0;
+            print("iveskite skaiciu:");
+            int n = reader.nextInt();
 
-        int n = reader.nextInt();
-       skaicius(array, n);
 
+           x= skaicius(array, n);
+            isvestis(x, n);
+
+            System.out.println("Kartoti? (taip arba ne)");
+            BufferedReader atsakymas = new BufferedReader(new InputStreamReader(System.in));
+
+            if (atsakymas.readLine().equals("ne")) {
+                stop = true;
+            }
+        }
     }
 
     private static void print(String n) {
         System.out.println(n);
     }
-    private static void skaicius(int[] array, int n){
 
+    private static int skaicius(int[] array, int n){
+            int x=0;
         for(int i = 0; i < array.length; i++){
+
             if(array[i]==n) {
-
-                System.out.println(array[i]);
-
+                x= x +1;
             }
-
         }
+        return x;
+    }
+    private static void isvestis(int x,int n){
+        if(x==0){
+            print("Tokio skaiciaus nera");
+        }
+        else print("skaicius: "+n+" pasikartoja: "+x+" kartu");
+
     }
 }
