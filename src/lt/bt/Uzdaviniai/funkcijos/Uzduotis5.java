@@ -1,8 +1,6 @@
 package lt.bt.Uzdaviniai.funkcijos;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Uzduotis5 {
@@ -20,12 +18,7 @@ public class Uzduotis5 {
            x= skaicius(array, n);
             isvestis(x, n);
 
-            System.out.println("Kartoti? (taip arba ne)");
-            BufferedReader atsakymas = new BufferedReader(new InputStreamReader(System.in));
 
-            if (atsakymas.readLine().equals("ne")) {
-                stop = true;
-            }
         }
     }
 
@@ -38,7 +31,7 @@ public class Uzduotis5 {
         for(int i = 0; i < array.length; i++){
 
             if(array[i]==n) {
-                x= x +1;
+                x= x+1;
             }
         }
         return x;
