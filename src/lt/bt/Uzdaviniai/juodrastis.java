@@ -1,40 +1,33 @@
 package lt.bt.Uzdaviniai;
 
-import java.io.BufferedReader;
+
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class juodrastis {
     public static void main(String[] args) throws IOException {
-
-        String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\masyvu vidurkis.txt";
+        String filePath ="src\\lt\\bt\\Uzdaviniai\\txt\\masyvas.txt";
         File file = new File(filePath);
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String st;
-        int[] array = new int [5];
-        int i = 0;
-        int j = 0;
-
-        while ((st = br.readLine()) != null) {
-            array [i] = Integer.parseInt(st);
-            i++;
+        Scanner scanner = new Scanner(file);
+        int elementCount = 0;   //pavertimui
+        while (scanner.hasNextLine()) {
+            System.out.println(scanner.nextLine());
+            elementCount++;     //pavertimui
         }
+        scanner.close();
+                                //Paversti arejum
+        scanner = new Scanner(file);
 
-        int sum = 0;
-        for (i=0; i < array.length; i++) {
-            sum = sum + array[i];
+        int[] array = new int[elementCount];
+
+        for(int i = 0; i < elementCount; i++){
+            array[i] = scanner.nextInt();
         }
+        scanner.close();
 
-        double average = (double)sum/array.length;
-        int[] newArray = new int [array.length - 2];
+        System.out.println(array[1]);
 
-        for (i=0; i<array.length; i++) {
-            if(array[i]>average) {
-               newArray[j] = array[i];
-                j++;
-            }
-        }
 
     }
 }
