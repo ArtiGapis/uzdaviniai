@@ -18,6 +18,5 @@ public class trapecija {
 
        double area = 0.5f * (a + b) * h;
         System.out.println("Trapecijos plotas: "+area);
-
     }
 }
