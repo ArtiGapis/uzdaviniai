@@ -1,5 +1,6 @@
 package lt.bt.Uzdaviniai.papildomi;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -17,6 +18,28 @@ ar jų užteks nusipirkti norimą LEGO robotą, o rezultatus įrašytų į rezul
 
     public static void main(String[] args) throws IOException {
         Scanner reader = new Scanner(System.in);
+
+        String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\Duomenys.txt";
+        File file = new File(filePath);
+        Scanner scanner = new Scanner(file);
+        int elementCount = 0;   			//pavertimui
+        while (scanner.hasNextLine()) {
+            System.out.println(scanner.nextLine());
+            elementCount++;     			//pavertimui
+        }
+        scanner.close();
+        //Paversti arejum
+        scanner = new Scanner(file);
+
+        int[] array = new int[elementCount];
+
+        for(int i = 0; i < elementCount; i++){
+            array[i] = scanner.nextInt();
+        }
+        scanner.close();
+
+        System.out.println(array[1]);
+
         int a = 0; //roboto kaina (septinta eilute)
         int n = 0;//imesta i taupykle (faile pirmas)
         int m = 0; //kiek imete (5 eilutes)
@@ -42,6 +65,7 @@ ar jų užteks nusipirkti norimą LEGO robotą, o rezultatus įrašytų į rezul
     private static void bandymas2dimenciju() {
         Scanner reader = new Scanner(System.in);
         System.out.println("startas");
+
 
         int numbers[][];
         numbers = new int[5][5];

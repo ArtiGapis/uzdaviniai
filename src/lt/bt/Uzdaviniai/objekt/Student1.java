@@ -1,7 +1,5 @@
 package lt.bt.Uzdaviniai.objekt;
 
-import java.io.IOException;
-
 public class Student1 {
     public static void main(String[] args) {
         Student1 task = new Student1();

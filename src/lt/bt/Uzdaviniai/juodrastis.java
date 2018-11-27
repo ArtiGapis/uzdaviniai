@@ -3,31 +3,26 @@ package lt.bt.Uzdaviniai;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class juodrastis {
     public static void main(String[] args) throws IOException {
-        String filePath ="src\\lt\\bt\\Uzdaviniai\\txt\\masyvas.txt";
-        File file = new File(filePath);
+
+        int totalRow = 5;
+        int totalColumn = 20;
+        char[][] myArray = new char[totalRow][totalColumn];
+        File file = new File("src\\lt\\bt\\Uzdaviniai\\txt\\2Dband.txt");
         Scanner scanner = new Scanner(file);
-        int elementCount = 0;   //pavertimui
-        while (scanner.hasNextLine()) {
-            System.out.println(scanner.nextLine());
-            elementCount++;     //pavertimui
+
+
+        for (int row = 0; scanner.hasNextLine() && row < totalRow; row++) {
+            char[] chars = scanner.nextLine().toCharArray();
+            for (int i = 0; i < totalColumn && i < chars.length; i++) {
+                myArray[row][i] = chars[i];
+                System.out.println(myArray[row][i]);
+
+            }
         }
-        scanner.close();
-                                //Paversti arejum
-        scanner = new Scanner(file);
-
-        int[] array = new int[elementCount];
-
-        for(int i = 0; i < elementCount; i++){
-            array[i] = scanner.nextInt();
-        }
-        scanner.close();
-
-        System.out.println(array[1]);
-
-
     }
 }
