@@ -4,6 +4,8 @@ import lt.bt.Uzdaviniai.Abstract.Figura;
 
 public class Apskritimas extends Figura {
 
+    public double perimeter;
+
     @Override
     public double Plotai() {
                 int r=5;
@@ -18,12 +20,7 @@ public class Apskritimas extends Figura {
 
     @Override
     public double PerimeterCalc() {
-        double perimeter=5;
-        double plotas=0;
         double band=perimeter/(2*Math.PI);
-        plotas=Math.PI * Math.pow(band);
-        return band;
+        return Math.PI * Math.pow(band, 2);
     }
-
-
 }

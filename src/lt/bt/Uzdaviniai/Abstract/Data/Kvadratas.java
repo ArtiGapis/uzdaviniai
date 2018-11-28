@@ -3,7 +3,7 @@ package lt.bt.Uzdaviniai.Abstract.Data;
 import lt.bt.Uzdaviniai.Abstract.Figura;
 
 public class Kvadratas extends Figura {
-
+public double perimeter;
     @Override
     public double Plotai() {
         int a=5;
@@ -19,9 +19,6 @@ public class Kvadratas extends Figura {
     }
     @Override
     public double PerimeterCalc() {
-        double perimeter=100;
-        int plotas;
-        plotas=Math.pow(perimeter/4);
-        return 0;
+        return Math.pow(perimeter/4, 2);
     }
 }

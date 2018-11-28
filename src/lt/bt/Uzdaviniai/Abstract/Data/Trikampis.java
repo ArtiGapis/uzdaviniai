@@ -3,6 +3,7 @@ package lt.bt.Uzdaviniai.Abstract.Data;
 import lt.bt.Uzdaviniai.Abstract.Figura;
 
 public class Trikampis extends Figura {
+    public double perimeter;
 
     @Override
     public double Plotai() {
@@ -19,9 +20,7 @@ public class Trikampis extends Figura {
     }
     @Override
     public double PerimeterCalc() {
-
-        return 0;
+        double p=perimeter/3;
+        return (p*p*Math.sqrt(3))/4;
     }
-
-
 }
