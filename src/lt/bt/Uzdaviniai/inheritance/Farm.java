@@ -13,15 +13,13 @@ public class Farm {
 
         Animal[] animals = {sheep, cat, dog, chicken, dog, cat, sheep, cow, sheep, chicken, cat};
 
-        Animal[] animals2 = {sheep, cat, dog, chicken, dog, cat, sheep, cow, sheep, chicken, cat};
-
         int catNum = 0;
         int dogNum = 0;
         int cowNum = 0;
         int sheepNum = 0;
         int chickenNum = 0;
 
-        for(int i =0; i<animals2.length; i++) {
+        for(int i =0; i<animals.length; i++) {
             if(animals[i] instanceof cat) {
                 catNum++;
             } else if (animals[i] instanceof dog) {
