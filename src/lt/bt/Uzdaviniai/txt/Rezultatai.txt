@@ -1,0 +1,4 @@
+Rezultatų failas 
+Maršruto atstumas: 15585 m.
+Ilgiausias atstumas: 2570 m.
+Trumpiausias atstumas: 450 m.

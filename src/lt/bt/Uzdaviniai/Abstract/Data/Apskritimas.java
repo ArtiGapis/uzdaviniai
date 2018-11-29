@@ -19,7 +19,8 @@ public class Apskritimas extends Figura {
         int r=5;
         return 2 * Math.PI * r;
     }
-    private double perimeter=Perimeter();
+
+    private double perimeter=getPerimeter();
 
     @Override
     public double PerimeterCalc() {

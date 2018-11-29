@@ -20,8 +20,9 @@ public class Kvadratas extends Figura {
         int a=5;
         return 4*a;
     }
-    private double perimeter=Perimeter();
 
+
+    private double perimeter=getPerimeter();
     @Override
     public double PerimeterCalc() {
         return Math.pow(perimeter/4, 2);

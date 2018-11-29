@@ -21,7 +21,9 @@ public class Trikampis extends Figura {
         return 3 * a;
 
     }
-    private double perimeter=Perimeter();
+
+
+    private double perimeter=getPerimeter();
 
     @Override
     public double PerimeterCalc() {

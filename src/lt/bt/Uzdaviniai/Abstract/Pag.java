@@ -32,11 +32,8 @@ public class Pag {
         System.out.println("Trikampio " +trikampis.Perimeter());
         System.out.println("__________________________");
 
-        System.out.println("Iveskite perimetra");
-        //double perimeter=reader.nextDouble();
+        System.out.println("Iveskite triju figuru perimetra");
 
-
-        System.out.println("jaigu perimetras nurodytas ");
         System.out.println("Apskritimo plotas: " +apskritimas.PerimeterCalc());
         System.out.println("Kvadrato plotas: " +kvadratas.PerimeterCalc());
         System.out.println("Trikampio plotas: " +trikampis.PerimeterCalc());
