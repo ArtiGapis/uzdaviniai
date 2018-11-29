@@ -2,9 +2,11 @@ package lt.bt.Uzdaviniai.Abstract.Data;
 
 import lt.bt.Uzdaviniai.Abstract.Figura;
 
+import java.util.Scanner;
+
 public class Apskritimas extends Figura {
 
-    public double perimeter;
+    Scanner reader = new Scanner(System.in);
 
     @Override
     public double Plotai() {
@@ -17,6 +19,7 @@ public class Apskritimas extends Figura {
         int r=5;
         return 2 * Math.PI * r;
     }
+    private double perimeter=Perimeter();
 
     @Override
     public double PerimeterCalc() {

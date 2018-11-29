@@ -1,6 +1,9 @@
 package lt.bt.Uzdaviniai.Abstract;
 
+import java.util.Scanner;
+
 public abstract class Figura {
+    Scanner reader = new Scanner(System.in);
 
     public abstract double Plotai();
 
@@ -10,11 +13,11 @@ public abstract class Figura {
 
     private double perimeter;
 
+
     public double getPerimeter() {
         return perimeter;
     }
-
-    public void setPerimeter(double perimeter) {this.perimeter = perimeter; }
+   public void setPerimeter(double perimeter) {this.perimeter = perimeter; }
 
 }
 

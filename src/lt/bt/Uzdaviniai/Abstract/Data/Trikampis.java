@@ -2,8 +2,11 @@ package lt.bt.Uzdaviniai.Abstract.Data;
 
 import lt.bt.Uzdaviniai.Abstract.Figura;
 
+import java.util.Scanner;
+
+
 public class Trikampis extends Figura {
-    public double perimeter;
+    Scanner reader = new Scanner(System.in);
 
     @Override
     public double Plotai() {
@@ -18,6 +21,8 @@ public class Trikampis extends Figura {
         return 3 * a;
 
     }
+    private double perimeter=Perimeter();
+
     @Override
     public double PerimeterCalc() {
         double p=perimeter/3;

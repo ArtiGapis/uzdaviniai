@@ -2,8 +2,11 @@ package lt.bt.Uzdaviniai.Abstract.Data;
 
 import lt.bt.Uzdaviniai.Abstract.Figura;
 
+import java.util.Scanner;
+
 public class Kvadratas extends Figura {
-public double perimeter;
+    Scanner reader = new Scanner(System.in);
+
     @Override
     public double Plotai() {
         int a=5;
@@ -17,6 +20,8 @@ public double perimeter;
         int a=5;
         return 4*a;
     }
+    private double perimeter=Perimeter();
+
     @Override
     public double PerimeterCalc() {
         return Math.pow(perimeter/4, 2);

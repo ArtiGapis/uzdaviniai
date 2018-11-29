@@ -12,10 +12,11 @@ public class Pag {
         System.out.println("Start");
         System.out.println("__________________________");
 
+
+
         Figura apskritimas  = new Apskritimas();
         Figura kvadratas = new Kvadratas();
         Figura trikampis = new Trikampis();
-        System.out.println("Iveskite perimetra:");
 
 
         System.out.println("Plotai");
@@ -30,6 +31,10 @@ public class Pag {
         System.out.println("Kvadrato " +kvadratas.Perimeter());
         System.out.println("Trikampio " +trikampis.Perimeter());
         System.out.println("__________________________");
+
+        System.out.println("Iveskite perimetra");
+        //double perimeter=reader.nextDouble();
+
 
         System.out.println("jaigu perimetras nurodytas ");
         System.out.println("Apskritimo plotas: " +apskritimas.PerimeterCalc());
