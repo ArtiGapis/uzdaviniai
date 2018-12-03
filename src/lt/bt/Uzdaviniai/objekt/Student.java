@@ -1,6 +1,8 @@
 package lt.bt.Uzdaviniai.objekt;
 
 
+import lt.bt.Uzdaviniai.papildomi.Padangu_uzd.Ratas;
+
 public class Student {
 
     private String name;
@@ -15,9 +17,7 @@ public class Student {
         this.grade = grade;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;

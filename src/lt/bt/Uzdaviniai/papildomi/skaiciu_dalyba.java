@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class skaiciu_dalyba {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int a=2;
         int b=5;
 
@@ -14,18 +14,16 @@ public class skaiciu_dalyba {
     private static void arejus(int a, int b) {
         Scanner reader = new Scanner(System.in);
 
-        int[] array = new int[b+a];
-
-        for(int i = a; i <= b; i++){
-            array[i] = i;
-            System.out.println("band - "+array[i]);
-            for(int i1 = a; i1 <= array[i]; i1++){
-
+        int[][] array = new int[b][b];
+        for(int i = 0; i < b; i++) {
+            for (int j = 0; j < b; j++){
+                array[i][j] = i + a;
+                array[i][j] = j + a;
+                System.out.println("arrays - " + array[0][i]);
             }
+        }System.out.println("arrayOut - "+array[0]);
 
-
-
-            }
     }
+
 
 }

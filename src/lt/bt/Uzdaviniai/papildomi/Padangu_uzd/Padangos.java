@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Padangos {
     public static void main(String[] args) throws IOException {
+
         read();
     }
 
@@ -47,11 +48,13 @@ public class Padangos {
                 bendraKaina=padangaSandeliy.getKaina()+bendraKaina;
                 kiekis++;
             }
-        }System.out.println(bendraKaina);System.out.println(kiekis);
+        }
+        System.out.println("Tinkamų padangų skaičius: "+kiekis);
+        System.out.println("Jos kainuotų: "+bendraKaina);
     }
 
-    private static void pirmasAts() {
-
+    public void print() {
+        //System.out.println(bendraKaina);
+        //System.out.println(kiekis);
     }
-
-    }
+}

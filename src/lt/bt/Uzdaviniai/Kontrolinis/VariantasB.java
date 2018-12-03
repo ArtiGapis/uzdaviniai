@@ -7,16 +7,12 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class VariantasB {
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) {
         int sum = 0;
-        int min=0;
-        int max=0;
-
-        read( sum, min, max);
+        read( sum);
     }
 
-    private static void read (int sum,int min,int max){
+    private static void read(int sum){
         try {
             String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\DuomenysB.txt";
             File file = new File(filePath);
@@ -31,8 +27,8 @@ public class VariantasB {
                     sum = sum + array[i];
                 }
 
-                max = array[0];
-                min = array[0];
+                int max = array[0];
+                int min = array[0];
 
                 for (int i = 0; i < stopsCount; i++) {
                     if (array[i] > max) {
@@ -42,18 +38,18 @@ public class VariantasB {
                     }
                 }
                 printToConsole(sum, min, max);
-                writeToFiles(sum,min,max);
+                writeToFiles(sum, min, max);
 
             }scanner.close();
         }catch (IOException e){ System.err.println("Nera failo");}
     }
 
-    private static void printToConsole(int sum,int min,int max) throws IOException {
-        System.out.println("REZULTATU FAILAS"); // ats pirmas
+    private static void printToConsole(int sum,int min,int max) {
+        System.out.println("REZULTATU FAILAS"); // Ats pirmas
         System.out.println("____________________");
-        System.out.println("Bendras atstumas:" + sum); // ats pirmas
-        System.out.println("Maziausias: " + min); //Ats antras
-        System.out.println("Didziausa: " + max); //Ats trecias
+        System.out.println("Maršruto atstumas:" + sum +" m."); // Ats pirmas
+        System.out.println("Trumpiausias atstumas: " + min +" m."); //Ats antras
+        System.out.println("Ilgiausias atstumas: " + max +" m."); //Ats trecias
     }
 
     private static void writeToFiles(int sum,int min,int max) throws IOException {
