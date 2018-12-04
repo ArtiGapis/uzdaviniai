@@ -7,31 +7,31 @@ public class Ratas {
     private String greit;
     private double kaina=0;
 
-    public int getPlotis() {
+    int getPlotis() {
         return plotis;
     }
-    public void setPlotis(int plotis) {
+    void setPlotis(int plotis) {
         this.plotis = plotis;
     }
 
-    public int getAukstis() {
+    int getAukstis() {
         return aukstis;
     }
-    public void setAukstis(int aukstis) {
+    void setAukstis(int aukstis) {
         this.aukstis = aukstis;
     }
 
-    public String getGreit() {
+    String getGreit() {
         return greit;
     }
-    public void setGreit(String greit) {
+    void setGreit(String greit) {
         this.greit = greit;
     }
 
-    public double getKaina() {
+    double getKaina() {
         return kaina;
     }
-    public void setKaina(double kaina) {
+    void setKaina(double kaina) {
         this.kaina = kaina;
     }
 

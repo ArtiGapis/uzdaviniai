@@ -10,10 +10,8 @@ public class Padangos {
         calc();
     }
 
-    private static String read() {
+    private static String read() throws IOException {
         String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\padanga.txt";
-        File file = new File(filePath);
-        //Scanner scanner = new Scanner(file);
         return filePath;
     }
 
