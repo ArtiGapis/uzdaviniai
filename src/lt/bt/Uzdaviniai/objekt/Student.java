@@ -1,8 +1,6 @@
 package lt.bt.Uzdaviniai.objekt;
 
 
-import lt.bt.Uzdaviniai.papildomi.Padangu_uzd.Ratas;
-
 public class Student {
 
     private String name;

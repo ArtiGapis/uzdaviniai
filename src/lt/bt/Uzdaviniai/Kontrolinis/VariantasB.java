@@ -53,6 +53,7 @@ public class VariantasB {
     }
 
     private static void writeToFiles(int sum,int min,int max) throws IOException {
+        System.out.println("as");
         String fileName = "src\\lt\\bt\\Uzdaviniai\\txt\\Rezultatai.txt";
         String r = "Rezultatų failas \r\n";
         String suma = "Maršruto atstumas: " + sum +" m."+"\r\n";
