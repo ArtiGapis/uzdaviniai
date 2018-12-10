@@ -8,16 +8,6 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
-//    Calendar now = Calendar.getInstance();
-//    System.out.println("Data : " + now.get(Calendar.YEAR) + "-" +(now.get(Calendar.MONTH) + 1) + "-"
-//            + now.get(Calendar.DATE) );
-//
-//    now = Calendar.getInstance();
-//    now.add(Calendar.YEAR, -100);
-//    System.out.println("date before 100 years : " + (now.get(Calendar.MONTH) + 1) + "-"
-//            + now.get(Calendar.DATE) + "-" + now.get(Calendar.YEAR));
-
-
         read();
     }
 
@@ -43,7 +33,7 @@ public class Main {
 
             System.out.println(personInfo);
             System.out.println("Jam yra : " + now.get(Calendar.YEAR)+" m.");
-            System.out.println("Jam iki gimtadienio liko : " + now.get(Calendar.MONTH)+" men. "+now.get(Calendar.DATE)+" d. "+ "\r\n");
+            System.out.println("Jam iki gimtadienio liko : " + (now.get(Calendar.MONTH)+1)+" men. "+now.get(Calendar.DATE)+" d. "+ "\r\n");
 
         }
     }
