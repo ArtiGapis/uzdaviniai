@@ -1,11 +1,9 @@
 package lt.bt.Uzdaviniai.papildomi.Kaledu_senelis;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Arrays;
+import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
+
 
 public class Santa {
 
@@ -21,71 +19,72 @@ public class Santa {
      ir jų detales panaudoti kitų žaislų gamybai. Parašykite programą, kuri sudarytų sąrašą, kuriuos žaislus reikia pagaminti,
      kuriuos išardyti ir ar reikia papildyti anglių maišų atsargas. Paruoškite sąrašą Kalėdų seneliui su vaikų sąrašu ir
      jų adresais ir kokią dovaną jie gaus.
+
+     15 m ir vyresnius atmesti
+
+     vaikas geras ar blogas geram zaislas blogam anglys
+
+     kokius zaislus pagaminti
+
+     kokius isardyti
+
+     kiek reikia angliu
      */
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
 
-        //System.out.println(readToys());
-        //System.out.println(readChildren());
+
+        System.out.println(readToys());
+        System.out.println(readChildren());
         System.out.println(wishes());
-
     }
 
-    private static List<ElfWarehouse> readToys() throws FileNotFoundException {
-        String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\Kaledos\\duomenys.txt";
-        File file = new File(filePath);
-        Scanner scanner = new Scanner(file);
-
+    private static List<ElfWarehouse> readToys() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("src\\lt\\bt\\Uzdaviniai\\txt\\Kaledos\\duomenys.txt"));
+        String line = null;
         List<ElfWarehouse> toys = new LinkedList<>();
-        while (scanner.hasNext()) {
+        while ((line = br.readLine()) != null) {
+            String[] values = line.split(", ");
             ElfWarehouse elfWarehouse = new ElfWarehouse();
-            elfWarehouse.setToyName(scanner.findInLine("[A-Ža-ž].*[A-Ža-ž]"));
-            scanner.next();
-            elfWarehouse.setQuantity(scanner.nextInt());
-            scanner.nextLine();
+            elfWarehouse.setToyName(values[0]);
+            elfWarehouse.setQuantity(Integer.parseInt(values[1]));
             toys.add(elfWarehouse);
         }
+        br.close();
         return toys;
     }
 
-    private static List<ChildrenList> readChildren() throws FileNotFoundException {
-        String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\Kaledos\\charakteristikos.txt";
-        File file = new File(filePath);
-        Scanner scanner = new Scanner(file);
-
+    private static List<ChildrenList> readChildren() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("src\\lt\\bt\\Uzdaviniai\\txt\\Kaledos\\charakteristikos.txt"));
+        String line = null;
         List<ChildrenList> child = new LinkedList<>();
-        while (scanner.hasNext()) {
+        while ((line = br.readLine()) != null) {
+            String[] values = line.split(",");
             ChildrenList childrenList = new ChildrenList();
-            childrenList.setChildName(scanner.next());
-            if (childrenList.getChildName().endsWith(",")) {
-                childrenList.setChildName(childrenList.getChildName().substring(0, childrenList.getChildName().length() - 1));
-            }
-            childrenList.setChildSurname(scanner.next());
-            if (childrenList.getChildSurname().endsWith(",")) {
-                childrenList.setChildSurname(childrenList.getChildSurname().substring(0, childrenList.getChildSurname().length() - 1));
-            }
-            childrenList.setCarma(scanner.next());
+            childrenList.setChildName(values[0]);
+            childrenList.setChildSurname(values[1]);
+            childrenList.setCarma(values[2]);
             child.add(childrenList);
-
         }
+        br.close();
         return child;
     }
 
-    private static List<ChildrenWishes> wishes() throws FileNotFoundException {
-        String filePath = "src\\lt\\bt\\Uzdaviniai\\txt\\Kaledos\\norai.txt";
-        File file = new File(filePath);
-        Scanner scanner = new Scanner(file);
-
-
+    private static List<ChildrenWishes> wishes() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("src\\lt\\bt\\Uzdaviniai\\txt\\Kaledos\\norai.txt"));
+        String line = null;
         List<ChildrenWishes> wish = new LinkedList<>();
-        while(scanner.hasNextLine()){
-            String value = scanner.next();
-            String[] values = value.split(",");
-
-
-            System.out.println(Arrays.toString(values));
+        while ((line = br.readLine()) != null) {
+            String[] values = line.split(", ");
+            ChildrenWishes childrenWishes = new ChildrenWishes();
+            childrenWishes.setChildName(values[0]);
+            childrenWishes.setChildSurname(values[1]);
+            childrenWishes.setAge(Integer.parseInt(values[2]));
+            childrenWishes.setAdress(values[3]);
+            childrenWishes.setWish(values[4]);
+            wish.add(childrenWishes);
         }
-
+        br.close();
         return wish;
     }
 }

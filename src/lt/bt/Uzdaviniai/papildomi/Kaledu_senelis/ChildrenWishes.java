@@ -4,7 +4,7 @@ public class ChildrenWishes {
 
     private String childName;
     private String childSurname;
-    private String age;
+    private int age;
     private String adress;
     private String wish;
 
@@ -23,10 +23,10 @@ public class ChildrenWishes {
         this.childSurname = childSurname;
     }
 
-    String getAge() {
+    int getAge() {
         return age;
     }
-    void setAge(String age) {
+    void setAge(int age) {
         this.age = age;
     }
 
